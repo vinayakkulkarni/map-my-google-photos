@@ -55,7 +55,7 @@
       const state = reactive({
         mapOptions: {
           accessToken: process.env.mapToken,
-          style: 'mapbox://styles/mapbox/dark-v9?optimize=true',
+          style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
           center: [78.96, 20.59],
           zoom: 4,
         },
