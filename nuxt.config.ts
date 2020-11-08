@@ -1,3 +1,5 @@
+import { head, build } from './config';
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -6,51 +8,12 @@ export default {
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: 'Nuxt :: Google Photos & Mapbox',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'msapplication-TileColor', content: '#303030' },
-      { name: 'msapplication-TileImage', content: '/icons/mstile-150x150.png' },
-
-      { name: 'theme-color', content: '#303030' },
-    ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/icons/favicon.ico',
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: '/icons/favicon-32x32.png',
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: '/icons/favicon-16x16.png',
-      },
-      {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: '/icons/apple-touch-icon.png',
-      },
-      {
-        rel: 'mask-icon',
-        href: '/icons/safari-pinned-tab.svg',
-        color: '#4e7da1',
-      },
-    ],
-  },
-
+  head,
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-loading
   loading: { color: '#4e7da1' },
+  // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-loading-indicator/
   loadingIndicator: {
-    name: 'folding-cube',
+    name: 'fading-circle',
     color: '#4e7da1',
     background: 'white',
   },
@@ -58,8 +21,8 @@ export default {
   css: [
     { src: 'mapbox-gl/dist/mapbox-gl.css', lang: 'css' },
     { src: 'v-mapbox/dist/v-mapbox.css', lang: 'css' },
-    { src: '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css', lang: 'css' },
     { src: '~/assets/css/global.css', lang: 'css' },
+    { src: '~/assets/css/fonts.css', lang: 'css' },
   ],
 
   // Nuxt env variables (https://nuxtjs.org/api/configuration-env/)
@@ -104,6 +67,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://auth.nuxtjs.org/
+    '@nuxtjs/auth',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -134,7 +99,38 @@ export default {
       lang: 'en',
     },
   },
-
+  // Auth module configuration (https://auth.nuxtjs.org/#getting-started)
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/',
+      callback: '/login',
+      home: '/',
+    },
+    strategies: {
+      google: {
+        client_id: process.env.GOOGLE_CLIENT_ID,
+        client_secret: process.env.GOOGLE_CLIENT_SECRET,
+        code_challenge_method: 'S256',
+        grant_type: 'authorization_code',
+        authorization_endpoint: 'https://accounts.google.com/o/oauth2/auth',
+        userinfo_endpoint: 'https://www.googleapis.com/oauth2/v3/userinfo',
+        scope: [
+          'openid',
+          'profile',
+          'email',
+          'https://www.googleapis.com/auth/photoslibrary.readonly',
+          'https://www.googleapis.com/auth/photoslibrary',
+        ],
+        response_type: 'token',
+        token_type: 'Bearer',
+        token_key: 'access_token',
+      },
+    },
+  },
+  router: {
+    middleware: ['auth'],
+  },
   // Read more: https://typescript.nuxtjs.org/guide/lint.html#runtime-lint
   typescript: {
     typeCheck: {
@@ -146,11 +142,5 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    extend(config) {
-      config.node = {
-        fs: 'empty',
-      };
-    },
-  },
+  build,
 };
