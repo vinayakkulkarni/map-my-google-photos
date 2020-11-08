@@ -7,10 +7,8 @@
 - Nuxt.js (base framework 💚)
   - PWA module
   - Axios module
-  - Firebase module
+  - Auth module
 - TailwindCSS (for the stylez ☠️)
-- Firebase (for OAuth2 🔑)
-  - Auth
 - Google APIs (for fetching photos 🌁)
 - Mapbox (for rendering the photos on a rad map 🌍)
 
