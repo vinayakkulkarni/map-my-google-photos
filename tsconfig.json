@@ -26,6 +26,8 @@
     "types": [
       "@types/node",
       "@nuxt/types",
+      "@nuxtjs/axios",
+      "@types/nuxtjs__auth",
       "@types/mapbox-gl",
     ]
   },
