@@ -63,14 +63,30 @@
         />
       </svg>
     </div>
-    <select
-      v-model="$colorMode.preference"
-      class="w-32 px-4 text-base border rounded text-cool-gray-800 bg-cool-gray-200 border-cool-gray-700 dark:text-cool-gray-300 dark:bg-cool-gray-900 form-select"
-    >
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
+    <!-- Theme switcher & Logout -->
+    <div class="flex items-center justify-center space-x-4">
+      <select
+        v-model="$colorMode.preference"
+        class="w-32 px-4 text-base border rounded text-cool-gray-800 bg-cool-gray-200 border-cool-gray-700 dark:text-cool-gray-300 dark:bg-cool-gray-900 form-select"
+      >
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <svg
+        class="w-6 h-6 cursor-pointer"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        @click="logout"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -79,5 +95,13 @@
 
   export default defineComponent({
     name: 'Header',
+    setup(_, { root }) {
+      async function logout() {
+        await root.$auth.logout();
+      }
+      return {
+        logout,
+      };
+    },
   });
 </script>
