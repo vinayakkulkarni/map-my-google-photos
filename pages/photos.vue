@@ -10,7 +10,7 @@
           <!-- <pre> {{ mediaItem }} </pre> -->
           <img
             :src="mediaItem.baseUrl"
-            class="object-fill object-center w-full h-full hover:shadow-xl"
+            class="object-none object-center w-full h-full hover:shadow-xl"
           />
         </div>
       </div>
