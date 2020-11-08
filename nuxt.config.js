@@ -7,7 +7,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Hasura + Nuxt & MapboxGL',
+    title: 'Nuxt :: Google Photos & Mapbox',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -36,22 +36,22 @@ export default {
         href: '/icons/favicon-16x16.png',
       },
       {
-        rel: 'mask-icon',
-        href: '/icons/safari-pinned-tab.svg',
-        color: '#5bbad5',
-      },
-      {
         rel: 'apple-touch-icon',
         sizes: '180x180',
         href: '/icons/apple-touch-icon.png',
       },
+      {
+        rel: 'mask-icon',
+        href: '/icons/safari-pinned-tab.svg',
+        color: '#4e7da1',
+      },
     ],
   },
 
-  loading: { color: '#303030' },
+  loading: { color: '#4e7da1' },
   loadingIndicator: {
     name: 'folding-cube',
-    color: '#303030',
+    color: '#4e7da1',
     background: 'white',
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -118,18 +118,18 @@ export default {
     },
     // https://pwa.nuxtjs.org/meta
     meta: {
-      name: 'Nuxt, Hasura & Mapbox',
-      theme_color: '#303030',
+      name: 'Nuxt, Google Photos & Mapbox',
+      theme_color: '#4e7da1',
       author: 'Vinayak Kulkarni',
       lang: 'en',
     },
     // https://pwa.nuxtjs.org/manifest
     manifest: {
-      name: 'Nuxt with Hasura.io',
+      name: 'Nuxt, Google Photos & Mapbox',
       short_name: 'NHM',
-      description: 'Nuxt with Hasura, GraphQL & mapbox-gl',
-      categories: ['Hasura', 'Apollo', 'GraphQL', 'Web Based GIS'],
-      theme_color: '#303030',
+      description: 'Render your georeferenced google photos on mapbox-gl map',
+      categories: ['Nuxt.js', 'Mapbox', 'Google Photos', 'Web Based GIS'],
+      theme_color: '#4e7da1',
       background_color: '#303030',
       lang: 'en',
     },

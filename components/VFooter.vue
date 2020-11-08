@@ -12,7 +12,7 @@
     >
       <span class="text-xs opacity-50">(v{{ state.appVersion }})</span>
       <a
-        href="https://github.com/vinayakkulkarni/nuxt-hasura-mapbox"
+        href="https://github.com/vinayakkulkarni/map-my-google-photos"
         target="_blank"
         rel="noreferrer noopener"
         aria-label="GitHub"
@@ -48,7 +48,7 @@
         </svg>
       </a>
       <a
-        href="https://app.netlify.com/sites/nuxt-hasura-mapbox/deploys"
+        href="https://app.netlify.com/sites/map-my-google-photos/deploys"
         target="_blank"
         rel="noreferrer noopener"
         aria-label="Deploys via Netlify"
