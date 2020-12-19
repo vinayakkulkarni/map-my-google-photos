@@ -45,7 +45,7 @@
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.1",
     "@nuxtjs/stylelint-module": "^4.0.0",
-    "@nuxtjs/tailwindcss": "^3.3.4",
+    "@nuxtjs/tailwindcss": "^3.4.0",
     "@types/nuxtjs__auth": "^4.8.6",
     "@typescript-eslint/parser": "^4.10.0",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
