@@ -26,7 +26,7 @@
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.7.2",
     "@types/mapbox-gl": "^1.13.0",
-    "@vue/composition-api": "^1.0.0-beta.25",
+    "@vue/composition-api": "^1.0.0-beta.26",
     "core-js": "^3.8.2",
     "mapbox-gl": "^1.13.0",
     "nanoid": "^2.1.11",
