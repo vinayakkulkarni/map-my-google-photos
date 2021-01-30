@@ -31,7 +31,7 @@
     "mapbox-gl": "^1.13.0",
     "nanoid": "^2.1.11",
     "nuxt": "^2.14.12",
-    "v-mapbox": "^1.6.4"
+    "v-mapbox": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
