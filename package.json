@@ -30,7 +30,7 @@
     "core-js": "^3.9.1",
     "mapbox-gl": "^1.13.1",
     "nanoid": "^2.1.11",
-    "nuxt": "^2.15.2",
+    "nuxt": "^2.15.3",
     "v-mapbox": "^1.7.0"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "@commitlint/config-conventional": "^12.0.1",
     "@nuxt/types": "^2.15.2",
     "@nuxt/typescript-build": "^2.0.6",
-    "@nuxtjs/color-mode": "^2.0.4",
+    "@nuxtjs/color-mode": "^2.0.5",
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
@@ -57,7 +57,7 @@
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "stylelint": "^13.11.0",
+    "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "typescript": "^4.2.3"
