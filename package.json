@@ -30,7 +30,7 @@
     "core-js": "^3.9.1",
     "mapbox-gl": "^1.13.1",
     "nanoid": "^2.1.11",
-    "nuxt": "^2.15.2",
+    "nuxt": "^2.15.3",
     "v-mapbox": "^1.7.0"
   },
   "devDependencies": {
