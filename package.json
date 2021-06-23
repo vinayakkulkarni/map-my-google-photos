@@ -1,5 +1,5 @@
 {
-  "name": "map-my-google-photos",
+  "name": "@vinayakkulkarni/map-my-google-photos",
   "description": "Visualize your Google photos on Mapbox",
   "version": "1.0.0",
   "private": true,
@@ -15,7 +15,8 @@
     "lint:prettier": "prettier --check \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
     "lint:prettier:fix": "prettier --write \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\" --ignore-path .gitignore",
     "lint:css": "stylelint '**/*.{css,scss,sass}'",
-    "lint:css:fix": "stylelint --fix '**/*.{css,scss,sass}'"
+    "lint:css:fix": "stylelint --fix '**/*.{css,scss,sass}'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.1.0",
@@ -54,7 +55,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
     "stylelint": "^13.13.1",
