@@ -31,14 +31,14 @@
     "mapbox-gl": "^1.13.1",
     "nanoid": "^2.1.11",
     "nuxt": "^2.15.6",
-    "v-mapbox": "^1.7.0"
+    "v-mapbox": "^1.7.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@nuxt/types": "^2.15.6",
+    "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.0.8",
     "@nuxtjs/eslint-config": "^6.0.0",
