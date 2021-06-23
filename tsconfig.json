@@ -25,18 +25,30 @@
     },
     "types": [
       "@types/node",
+      "@types/mapbox-gl",
+      "@types/nuxtjs__auth",
       "@nuxt/types",
       "@nuxtjs/axios",
-      "@types/nuxtjs__auth",
-      "@types/mapbox-gl",
     ]
   },
-  "files": [
-    "types/v-mapbox.d.ts",
+  "include": [
+    "pages/**/*.vue",
+    "components/**/*.vue",
+    "layouts/**/*.vue",
+    "plugins/**/*.js",
+    "nuxt.config.js",
+    // TypeScript
+    "config/**/*.ts",
+    "types/**/*.ts",
+    "plugins/**/*.ts",
+    "nuxt.config.ts"
   ],
   "exclude": [
     "node_modules",
     ".nuxt",
-    "dist"
+    "dist",
+    "static",
+    "test",
+    "tailwind.config.js"
   ]
 }

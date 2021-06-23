@@ -1,4 +1,4 @@
-import { head, build } from './config';
+import { build, head } from './config';
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
@@ -32,7 +32,7 @@ export default {
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '@/plugins/composition-api', mode: 'client' }],
+  plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -41,6 +41,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
+    '@nuxtjs/composition-api/module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
@@ -54,6 +56,7 @@ export default {
     configPath: 'tailwind.config.js',
     exposeConfig: true,
     config: {},
+    viewer: false,
   },
   // Read more: https://color-mode.nuxtjs.org/#tailwindcss-dark-mode
   colorMode: {
@@ -136,7 +139,13 @@ export default {
     typeCheck: {
       eslint: {
         enabled: true,
-        files: './',
+        files: [
+          'components/**/*.{ts,js,vue}',
+          'config/**/*.{ts,js}',
+          'layouts/**/*.{ts,js,vue}',
+          'pages/**/*.{ts,js,vue}',
+          'utils/**/*.{ts,js}',
+        ],
       },
     },
   },

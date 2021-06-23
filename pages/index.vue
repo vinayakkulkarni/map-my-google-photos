@@ -14,7 +14,6 @@
         :preserve-drawing-buffer="true"
         :hash="false"
         @load="mapLoaded"
-        @click="mapClicked"
       >
         <mgl-navigation-control position="top-right" />
         <mgl-geolocate-control position="top-left" />
@@ -32,7 +31,7 @@
     defineComponent,
     reactive,
     shallowReadonly,
-  } from '@vue/composition-api';
+  } from '@nuxtjs/composition-api';
   import {
     MglMap,
     MglNavigationControl,
@@ -58,23 +57,20 @@
           style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
           center: [78.96, 20.59],
           zoom: 4,
+          maxZoom: 22,
         },
         mapboxgl,
         loading: false,
       });
       let map = shallowReadonly({} as mapboxgl.Map);
-      function mapLoaded(e: any) {
+      function mapLoaded(e: { map: mapboxgl.Map }) {
         map = e.map;
         // add draw control
         console.log('map', map);
       }
-      function mapClicked(e: object) {
-        console.log('e', e);
-      }
       return {
         state,
         mapLoaded,
-        mapClicked,
       };
     },
   });

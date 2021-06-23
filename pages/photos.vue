@@ -3,7 +3,7 @@
     <div class="flex-1 overflow-x-auto">
       <div class="grid grid-cols-1 gap-4 m-4 md:grid-cols-2 lg:grid-cols-4">
         <div
-          v-for="mediaItem in mediaItems.mediaItems"
+          v-for="mediaItem in photos.mediaItems"
           :key="mediaItem.id"
           class="overflow-x-hidden bg-gray-600 rounded"
         >
@@ -19,43 +19,36 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, ref } from '@vue/composition-api';
+  import { defineComponent, ref, Ref } from '@nuxtjs/composition-api';
+  import { getRuntimeVM } from '~/utils/runtime';
 
   export default defineComponent({
     name: 'PhotosPage',
-    setup(_, { root }) {
+    setup() {
+      const { $axios } = getRuntimeVM();
       const albums = ref([]);
-      const mediaItems = ref([]);
-      const photo = ref(null);
+      const photos: Ref<{ mediaItems: { id: string }[] }[]> = ref([]);
 
       getAlbums();
       getMediaItems();
 
       async function getAlbums(): Promise<void> {
-        const { data } = await root.$axios.get(
+        const { data } = await $axios.get(
           'https://photoslibrary.googleapis.com/v1/albums',
         );
         albums.value = data;
       }
 
       async function getMediaItems(): Promise<void> {
-        const { data } = await root.$axios.get(
+        const { data } = await $axios.get(
           `https://photoslibrary.googleapis.com/v1/mediaItems`,
         );
-        mediaItems.value = data;
-        getMediaItem(mediaItems.value.mediaItems[0].id);
+        photos.value = data;
       }
 
-      async function getMediaItem(id: string): Promise<void> {
-        const { data } = await root.$axios.get(
-          `https://photoslibrary.googleapis.com/v1/mediaItems/${id}`,
-        );
-        photo.value = data;
-      }
       return {
         albums,
-        mediaItems,
-        photo,
+        photos,
       };
     },
   });

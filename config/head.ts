@@ -1,5 +1,6 @@
-// Global page headers (https://go.nuxtjs.dev/config-head)
-export default {
+import { NuxtOptionsHead } from '@nuxt/types/config/head';
+
+const head: NuxtOptionsHead = {
   title: 'Nuxt :: Google Photos & Mapbox',
   meta: [
     { charset: 'utf-8' },
@@ -40,3 +41,5 @@ export default {
     },
   ],
 };
+
+export default head;
