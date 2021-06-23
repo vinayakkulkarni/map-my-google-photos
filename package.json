@@ -31,7 +31,7 @@
     "mapbox-gl": "^1.13.1",
     "nanoid": "^2.1.11",
     "nuxt": "^2.15.6",
-    "v-mapbox": "^1.7.0"
+    "v-mapbox": "^1.7.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -53,7 +53,7 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.9.0",
+    "eslint-plugin-vue": "^7.11.1",
     "husky": "^4.3.8",
     "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
