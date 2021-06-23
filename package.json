@@ -31,10 +31,10 @@
     "mapbox-gl": "^1.13.1",
     "nanoid": "^2.1.11",
     "nuxt": "^2.15.6",
-    "v-mapbox": "^1.7.0"
+    "v-mapbox": "^1.7.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
+    "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.2",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
