@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:css",
     "lintfix": "npm run lint:eslint:fix && npm run lint:prettier:fix && npm run lint:css:fix",
     "lint:eslint": "eslint \"{,!(node_modules|.nuxt|dist|static)/**/}*.{js,ts,vue}\"",
@@ -19,7 +19,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
