@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 jobs:
   ci:
@@ -17,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
+        node: [16]
 
     steps:
       - name: Checkout 🛎
@@ -27,6 +25,10 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node }}
+          check-latest: true
+
+      - name: Upgrade npm 🥳
+        run: npm i -g npm@latest
 
       - name: Cache node_modules 📦
         uses: actions/cache@v2.1.6
@@ -37,7 +39,18 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit --no-optional
 
-      - name: Run linter 👀
-        run: npm run lint
+      - name: Run linter(s) 👀
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          continue_on_error: true
+          git_name: github-actions[bot]
+          git_email: github-actions[bot]@users.noreply.github.com
+          auto_fix: false
+          eslint: true
+          eslint_extensions: js,ts,vue
+          prettier: true
+          prettier_extensions: js,ts,vue
+          neutral_check_on_warning: true
