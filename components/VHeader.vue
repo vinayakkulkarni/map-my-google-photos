@@ -1,6 +1,15 @@
 <template>
   <div
-    class="flex items-center justify-between w-full h-20 px-4 border-b border-cool-gray-300 dark:border-cool-gray-700"
+    class="
+      flex
+      items-center
+      justify-between
+      w-full
+      h-20
+      px-4
+      border-b border-cool-gray-300
+      dark:border-cool-gray-700
+    "
   >
     <div title="Home">
       <svg
@@ -67,7 +76,18 @@
     <div class="flex items-center justify-center space-x-4">
       <select
         v-model="$colorMode.preference"
-        class="w-32 px-4 text-base border rounded text-cool-gray-800 bg-cool-gray-200 border-cool-gray-700 dark:text-cool-gray-300 dark:bg-cool-gray-900 form-select"
+        class="
+          w-32
+          px-4
+          text-base
+          border
+          rounded
+          text-cool-gray-800
+          bg-cool-gray-200
+          border-cool-gray-700
+          dark:text-cool-gray-300 dark:bg-cool-gray-900
+          form-select
+        "
       >
         <option value="system">System</option>
         <option value="light">Light</option>
