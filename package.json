@@ -27,11 +27,11 @@
     "@tailwindcss/ui": "^0.7.2",
     "@types/mapbox-gl": "^1.13.1",
     "@vue/composition-api": "^1.0.0-rc.6",
-    "core-js": "^3.12.1",
+    "core-js": "^3.15.1",
     "mapbox-gl": "^1.13.1",
     "nanoid": "^2.1.11",
     "nuxt": "^2.15.6",
-    "v-mapbox": "^1.7.0"
+    "v-mapbox": "^1.7.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
