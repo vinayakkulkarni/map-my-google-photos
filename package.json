@@ -51,7 +51,7 @@
     "@nuxtjs/tailwindcss": "^4.2.0",
     "@types/mapbox-gl": "^1.13.1",
     "@types/nuxtjs__auth": "^4.8.7",
-    "@typescript-eslint/parser": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.2",
     "@vinayakkulkarni/prettier-config-vue": "^1.0.0",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
