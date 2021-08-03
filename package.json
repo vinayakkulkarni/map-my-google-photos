@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.14.9",
     "@babel/preset-typescript": "^7.14.5",
     "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-conventional": "^13.1.0",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/color-mode": "^2.0.10",
