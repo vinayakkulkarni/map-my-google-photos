@@ -27,7 +27,7 @@
     "@nuxtjs/composition-api": "^0.29.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/aspect-ratio": "^0.2.1",
-    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
     "core-js": "^3.17.3",
     "mapbox-gl": "^1.13.1",
