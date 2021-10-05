@@ -60,7 +60,7 @@
     "eslint-plugin-vue": "^7.17.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.1.2",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.9",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
